@@ -25,8 +25,7 @@ exports.createCheckoutSession = catchErrBlock(
   async (request, response, next) => {
     const { user, tour, tourStart, tourEnd } = request.body;
 
-    const LAYAG_DOMAIN =
-      'https://62e2dd6e4844471ccf13f227--lively-gumption-2fffc2.netlify.app';
+    const LAYAG_DOMAIN = 'https://layag-travel-tours.netlify.app';
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
